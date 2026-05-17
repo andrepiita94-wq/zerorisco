@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "ZeroRisco",
+    "slug": "zerorisco",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "zerorisco",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#0A0A0A"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#0A0A0A",
+          "image": "./assets/images/splash.png",
+          "resizeMode": "cover",
+          "dark": {
+            "backgroundColor": "#0A0A0A",
+            "image": "./assets/images/splash.png",
+            "resizeMode": "cover"
+          }
+        }
+      ],
+      "expo-router",
+      "expo-font",
+      "@maplibre/maplibre-react-native",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Permita que o ZeroRisco acesse sua localização para navegação GPS.",
+          "locationAlwaysPermission": "Permita que o ZeroRisco acesse sua localização em segundo plano para continuar navegando."
+        }
+      ],
+      [
+        "expo-speech",
+        {}
+      ]
+    ],
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.zerorisco.gps",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "ZeroRisco precisa da sua localização para navegação GPS."
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon.png",
+        "backgroundColor": "#0A0A0A"
+      },
+      "package": "com.zerorisco.gps",
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/icon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": ""
+      }
+    }
+  }
+}
