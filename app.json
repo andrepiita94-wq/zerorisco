@@ -9,39 +9,10 @@
     "newArchEnabled": true,
     "icon": "./assets/images/icon.png",
     "splash": {
-      "image": "./assets/images/splash.png",
-      "resizeMode": "cover",
+      "image": "./assets/images/icon.png",
+      "resizeMode": "contain",
       "backgroundColor": "#0A0A0A"
     },
-    "plugins": [
-      [
-        "expo-splash-screen",
-        {
-          "backgroundColor": "#0A0A0A",
-          "image": "./assets/images/splash.png",
-          "resizeMode": "cover",
-          "dark": {
-            "backgroundColor": "#0A0A0A",
-            "image": "./assets/images/splash.png",
-            "resizeMode": "cover"
-          }
-        }
-      ],
-      "expo-router",
-      "expo-font",
-      "@maplibre/maplibre-react-native",
-      [
-        "expo-location",
-        {
-          "locationWhenInUsePermission": "Permita que o ZeroRisco acesse sua localização para navegação GPS.",
-          "locationAlwaysPermission": "Permita que o ZeroRisco acesse sua localização em segundo plano para continuar navegando."
-        }
-      ],
-      [
-        "expo-speech",
-        {}
-      ]
-    ],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.zerorisco.gps",
@@ -66,9 +37,30 @@
       "output": "static",
       "favicon": "./assets/images/icon.png"
     },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "origin": "https://replit.com/"
+        }
+      ],
+      "expo-font",
+      "@maplibre/maplibre-react-native",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Permita que o ZeroRisco acesse sua localização para navegação GPS.",
+          "locationAlwaysPermission": "Permita que o ZeroRisco acesse sua localização em segundo plano para continuar navegando."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
     "extra": {
       "eas": {
-        "projectId": ""
+        "projectId": "13dddec6-69c5-48b4-b883-199fb4fbde92"
       }
     }
   }
