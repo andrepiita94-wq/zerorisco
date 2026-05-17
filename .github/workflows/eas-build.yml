@@ -26,7 +26,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20.x'
-          cache: 'npm'
 
       - name: Setup Expo & EAS
         uses: expo/expo-github-action@v8
@@ -40,5 +39,5 @@ jobs:
       - name: Build APK (Android)
         run: eas build --platform android --profile ${{ github.event.inputs.profile || 'preview' }} --non-interactive
 
-      - name: Print build URL
-        run: echo "✅ Build finalizado! Acesse https://expo.dev/accounts/pitaandre/projects/zerorisco/builds para baixar o APK."
+      - name: Build concluído
+        run: echo "✅ APK disponível em https://expo.dev/accounts/pitaandre/projects/zerorisco/builds"
